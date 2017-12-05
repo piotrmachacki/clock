@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	background: #232323;
+	background-size: cover;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 16px;
+}
+
+.clock {
+	height: 100vh;
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.clock-face {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: linear-gradient(to bottom, #f9f9f9, #666);
+	box-shadow: rgba(0, 0, 0, 0.8) 5rem 5rem 5rem;
+	z-index: 10;
+}
+
+.clock-face::before {
+	content: '';
+	width: 28rem;
+	height: 28rem;
+	background: linear-gradient(to bottom, #fff, #e3e3e3);
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	border-radius: 50%;
+	z-index: 20;
+	box-shadow: inset rgba(0, 0, 0, 0.2) 0.2rem 0.2rem 1rem
+}
+
+.clock-face::after {
+	content: '';
+	width: 4rem;
+	height: 4rem;
+	background: #fff;
+	position: absolute;
+	top: 13rem;
+	left: 13rem;
+	border-radius: 50%;
+	z-index: 30;
+	box-shadow: inset 0 0 3rem #ccc;
+}
+
+.digits li {
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 4rem;
+	text-align: center;
+	margin: -2rem 0 0 -2rem;
+}
+
+.digits li:nth-child(1) {
+	transform: translate(6rem, -10.5rem);
+}
+.digits li:nth-child(2) {
+	transform: translate(10.5rem, -6rem);
+}
+.digits li:nth-child(3) {
+	transform: translate(12rem, 0rem);
+}
+.digits li:nth-child(4) {
+	transform: translate(10.5rem, 6rem);
+}
+.digits li:nth-child(5) {
+	transform: translate(6rem, 10.5rem);
+}
+.digits li:nth-child(6) {
+	transform: translate(0, 12rem);
+}
+.digits li:nth-child(7) {
+	transform: translate(-6rem, 10.5rem);
+}
+.digits li:nth-child(8) {
+	transform: translate(-10.5rem, 6rem);
+}
+.digits li:nth-child(9) {
+	transform: translate(-12rem, 0rem);
+}
+.digits li:nth-child(10) {
+	transform: translate(-10.5rem, -6rem);
+}
+.digits li:nth-child(12) {
+	transform: translate(0, -12rem);
+}
+.digits li:nth-child(11) {
+	transform: translate(-6rem, -10.5rem);
+}
+
+.hours-hand {
+	width: 1rem;
+	height: 10rem;
+	background: #242424;
+	position: absolute;
+	z-index: 110;
+	bottom: 50%;
+	left: 50%;
+	transform: rotate(0deg);
+	transform-origin: 0.5rem 8.5rem;
+	margin-left: -0.5rem;
+	margin-bottom: -1.5rem;
+	border-radius: 0.5rem;
+}
+
+.minutes-hand {
+	width: 0.8rem;
+	height: 12.4rem;
+	background: #242424;
+	position: absolute;
+	z-index: 120;
+	bottom: 50%;
+	left: 50%;
+	transform: rotate(0deg);
+	transform-origin: 0.4rem 11rem;
+	margin-left: -0.4rem;
+	margin-bottom: -1.4rem;
+	border-radius: 0.4rem;
+}
+
+.seconds-hand {
+	width: 0.4rem;
+	height: 14rem;
+	background: #ff0000;
+	position: absolute;
+	z-index: 130;
+	bottom: 50%;
+	left: 50%;
+	transform: rotate(0deg);
+	transform-origin: 0.2rem 12.8rem;
+	margin-left: -0.2rem;
+	margin-bottom: -1.2rem;
+	border-radius: 0.2rem;
+}
+
+.seconds-hand::before {
+	content: '';
+	width: 1.2rem;
+	height: 1.2rem;
+	background: inherit;
+	position: absolute;
+	z-index: 140;
+	bottom: 0.6rem;
+	border-radius: 50%;
+	margin-left: -0.4rem;
+}
+
